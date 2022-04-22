@@ -1,0 +1,58 @@
+<html> 
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<link rel="stylesheet" type="text/css" href="../static/index.css"> 
+
+
+
+
+	</head>
+	
+	<body>
+
+        <!-- <form class="grid" action="/result" method="POST"> -->
+        <form action="{{ url_for('result')}}" method="POST">
+
+          {% if name %}
+            <center>
+              <h3 style="color: blue;" class="let_space">Hello , the new document analysis report is sent to your email!!</h3>
+            </center> 
+
+          {% endif %}
+        <b><strong> Welcome to Valor Consulting Alphasense Report</strong></b>
+        <br>
+        <br>
+        <label for="email">Enter your email for the report:</label>
+            <!-- <input type = 'text' name = 'email'> -->
+        <input type="text" id="email" name="email">
+        <!-- <br>
+        <br>
+        <label for="dog-names">Do you want to check for a new document:</label> -->
+        <br>
+        <br>
+<!-- <select name="dog-names" id="dog-names">
+    <option value="rigatoni">Please Select an option</option>
+  <option value="dave">Yes</option>
+  <option value="pumpernickel">No</option>
+
+</select> -->
+
+          <center><input class="file_submit" type="Submit"></center>
+
+        </form>
+        <br><br><center><h3>{{ status}}<h3></center>
+
+        
+
+        
+
+        
+        <br>
+        <br>
+        <br>
+
+
+    </body>
+
+</html>
